@@ -1,0 +1,72 @@
+#!/bin/bash
+data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
+echo -e "=================== Information ========================"
+echo -e "*                                                      *"
+echo -e "*           Script Created By KingKongVPN              *"
+echo -e "*              WhatsApp: +60178760080                  *"
+echo -e "*              Telegram: @xiihaiqal                    *"
+echo -e "*                                                      *"
+echo -e "=================== Information ========================"
+echo -e ""
+echo -e "      ================ Dropbear =================";
+echo -e "      *Below Is A User Account That Is Logged In*";
+echo -e "      ================ Dropbear =================";
+
+for PID in "${data[@]}"
+do
+        #echo "check $PID";
+        NUM=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | wc -l`;
+        USER=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk '{print $10}'`;
+        IP=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk '{print $12}'`;
+        if [ $NUM -eq 1 ]; then
+    echo -e   $PID - $USER - $IP;
+        fi
+done
+
+echo "";
+
+data=( `ps aux | grep "\[priv\]" | sort -k 72 | awk '{print $2}'`);
+
+echo -e "      ================ Open SSH =================";
+echo -e "      *Below Is A User Account That Is Logged In*";
+echo -e "      ================ Open SSH =================";
+for PID in "${data[@]}"
+do
+        #echo "check $PID";
+        NUM=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | wc -l`;
+        USER=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk '{print $10}'`;
+        IP=`cat /var/log/auth.log | grep -i dropbear | grep -i "Password auth succeeded" | grep "dropbear\[$PID\]" | awk '{print $12}'`;
+        if [ $NUM -eq 1 ]; then
+    echo -e   $PID - $USER - $IP;
+        fi
+done
+
+        echo ""
+if [ -f "/etc/openvpn/tcp_stats.log" ]; then
+        line=`cat /etc/openvpn/tcp_stats.log | wc -l`
+        a=$((3+((line-8)/2)))
+        b=$(((line-8)/2))
+echo -e "      =============== OpenVPN TCP ===============";
+echo -e "      *Below Is A User Account That Is Logged In*";
+echo -e "      =============== OpenVPN TCP ===============";
+        cat /etc/openvpn/tcp_stats.log | head -n $a | tail -n $b | cut -d "," -f 1,2,5 | sed -e 's/,/   /g' > /tmp/vpn-login-db.txt
+        cat /tmp/vpn-login-db.txt
+        echo ""
+        rm /tmp/vpn-login-db.txt
+fi
+
+if [ -f "/etc/openvpn/udp_stats.log" ]; then
+        line=`cat /etc/openvpn/udp_stats.log | wc -l`
+        a=$((3+((line-8)/2)))
+        b=$(((line-8)/2))
+echo -e "      =============== OpenVPN UCP ===============";
+echo -e "      *Below Is A User Account That Is Logged In*";
+echo -e "      =============== OpenVPN UCP ===============";
+
+        cat /etc/openvpn/udp_stats.log | head -n $a | tail -n $b | cut -d "," -f 1,2,5 | sed -e 's/,/   /g' > /tmp/vpn-login-db.txt
+        cat /tmp/vpn-login-db.txt
+        echo ""
+        rm /tmp/vpn-login-db.txt
+fi
+
+

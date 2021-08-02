@@ -1,0 +1,56 @@
+#!/bin/bash
+echo "Updating Source......"
+sleep 1
+apt-get -qq install jq curl -y
+DOMAIN=myvpnkuy.xyz
+IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
+clear
+echo -e "=========================================="
+echo -e "*     Script Created By KingKongVPN      *"
+echo -e "=========================================="
+read -p " Enter Subdomain  : " sub
+echo -e "=========================================="
+echo -e "*     Script Created By KingKongVPN      *"
+echo -e "=========================================="
+echo -e ""
+SUB_DOMAIN=${sub}.myvpnkuy.xyz
+CF_ID=amsalsiregar12@gmail.com
+CF_KEY=d7646d2edd8f564e0da635c6b8b71c5fba0e2
+set -euo pipefail
+echo "Updating DNS for ${SUB_DOMAIN}..."
+sleep 1
+ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+if [[ "${#RECORD}" -le 10 ]]; then
+     RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
+fi
+
+RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
+clear
+echo -e "===================================="
+echo -e "=   Your Subdomain Information     ="
+echo -e "===================================="
+echo -e "Host IP        :" $IP
+echo -e "Subdomain      : $SUB_DOMAIN"
+echo -e "===================================="
+echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡"
+echo -e "===================================="
+echo $SUB_DOMAIN > /root/domain
+rm -f /root/cf.sh
+

@@ -1,0 +1,55 @@
+#!/bin/bash
+# Created by xiihaiqal
+red='\e[31m'
+green='\e[32m'
+blue='\e[34m'
+yellow='\e[33m'
+NC='\e[0m'
+opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+dropbearport="$(netstat -nlpt | grep -i dropbear | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+privoxyport="$(netstat -nlpt | grep -i privoxy | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+openvpntcp="$(cat /etc/openvpn/server_tcp.conf | grep -i port | awk '{print $2}')"
+openvpnudp="$(cat /etc/openvpn/server_udp.conf | grep -i port | awk '{print $2}')"
+squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
+IP=$(wget -qO- ipv4.icanhazip.com)
+echo -e "\e[36m------------------------------------------\e[0m"
+read -p "※ Total User To Generate : " banyakuser
+read -p "※ Total Days To Exp Or Y-M-D : " aktif
+today="$(date +"%Y-%m-%d")"
+expire=$(date -d "$aktif days" +"%Y-%m-%d")
+clear
+echo " "
+echo " "
+echo " "
+echo -e "\e[31m※\e[0m \e[33mPOWER BY KINGKONGVPN™ SERVER\e[0m \e[31m※\e[0m"
+echo -e "\e[36m------------------------------\e[0m"
+echo "◎ Details For Your Account ◎"
+echo -e "\e[36m------------------------------\e[0m"
+echo "Host/IP     : $IP"
+echo "Squid       : "$squidport  
+echo "OpenSSH     : "$opensshport  
+echo "Dropbear    : "$dropbearport
+echo "Privoxy     : "$privoxyport
+echo "Stunnel     : "$stunnel4port  
+echo "OpenVPN TCP : "$openvpntcp
+echo "OpenVPN UDP : "$openvpnudp
+  echo -e "\e[36m------------------------------\e[0m"
+    echo -e "\e[35mBIL\e[0m   \e[34mUSER\e[0m   \e[32mPASS\e[0m"
+for (( i=1; i <= $banyakuser; i++ ))
+do
+        USER=`cat /dev/urandom | tr -dc 'a-z' | fold -w 4 | head -n 1`
+        useradd -M -N -s /bin/false -e $expire $USER
+        PASS=`cat /dev/urandom | tr -dc '0-9' | fold -w 4 | head -n 1`;
+        echo $USER:$PASS | chpasswd
+  echo -e "\e[36m-----------------\e[0m"
+        echo -e "\e[35m$i.\e[0m    \e[34m$USER\e[0m   \e[32m$PASS\e[0m"
+done
+
+  echo -e "\e[36m------------------------------\e[0m"
+  echo -e "\e[31m ※\e[0m Expired On : $(date -d "$aktif days" +"%d-%m-%Y") \e[31m※\e[0m"
+  echo -e "\e[36m------------------------------\e[0m"
+  echo " "
+  echo " "
+  echo " "
+                                                                                                 

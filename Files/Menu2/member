@@ -1,0 +1,31 @@
+#!/bin/bash
+#Created By xiihaiqal
+clear
+echo -e "=================== Information ========================"
+echo -e "*                                                      *"
+echo -e "*           Script Created By KingKongVPN              *"
+echo -e "*              WhatsApp: +60178760080                  *"
+echo -e "*              Telegram: @xiihaiqal                    *"
+echo -e "*                                                      *"
+echo -e "=================== Information ========================"
+echo -e ""
+echo "     =========================================="
+echo "     * USERNAME                    EXP DATE   *"
+echo "     =========================================="
+while read expired
+do
+        AKUN="$(echo $expired | cut -d: -f1)"
+        ID="$(echo $expired | grep -v nobody | cut -d: -f3)"
+        exp="$(chage -l $AKUN | grep "Account expires" | awk -F": " '{print $2}')"
+        if [[ $ID -ge 1000 ]]; then
+        printf "%-20s %10s\n" "       $AKUN" "              $exp"
+        fi
+done < /etc/passwd
+JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+echo -e ""
+echo -e "===================== Total =========================="
+echo "                   Total User : $JUMLAH "
+echo -e "===================== Total =========================="
+echo -e ""
+
+

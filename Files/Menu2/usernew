@@ -1,0 +1,150 @@
+#!/bin/bash
+# Debian 9 & 10 64bit
+# Ubuntu 18.04 & 20.04 bit
+# Centos 7 & 8 64bit 
+# By KingKongVPN
+# ==================================================
+
+
+# Check OS version
+if [[ -e /etc/debian_version ]]; then
+        source /etc/os-release
+        OS=$ID # debian or ubuntu
+elif [[ -e /etc/centos-release ]]; then
+        source /etc/os-release
+        OS=centos
+fi
+
+Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
+Info="${Green_font_prefix}[information]${Font_color_suffix}"
+
+if [[ -e /etc/wireguard/params ]]; then
+        echo -e "${Info} WireGuard is already installed, please type addwg to add a client."
+        exit 1
+fi
+
+echo -e "${Info} Wireguard VPS AutoScript by KingKongVPN"
+# Detect public IPv4 address and pre-fill for the user
+
+# Detect public interface and pre-fill for the user
+SERVER_PUB_NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
+
+# Install WireGuard tools and module
+        if [[ $OS == 'ubuntu' ]]; then
+        apt install -y wireguard
+elif [[ $OS == 'debian' ]]; then
+        echo "deb http://deb.debian.org/debian/ unstable main" >/etc/apt/sources.list.d/unstable.list
+        printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' >/etc/apt/preferences.d/limit-unstable
+        apt update
+        apt install -y wireguard-tools iptables iptables-persistent
+        apt install -y linux-headers-$(uname -r)
+elif [[ ${OS} == 'centos' ]]; then
+        curl -Lo /etc/yum.repos.d/wireguard.repo https://copr.fedorainfracloud.org/coprs/jdoss/wireguard/repo/epel-7/jdoss-wireguard-epel-7.repo
+        yum -y update
+        yum -y install wireguard-dkms wireguard-tools
+        fi
+apt install iptables iptables-persistent -y
+# Make sure the directory exists (this does not seem the be the case on fedora)
+mkdir /etc/wireguard >/dev/null 2>&1
+
+chmod 600 -R /etc/wireguard/
+
+SERVER_PRIV_KEY=$(wg genkey)
+SERVER_PUB_KEY=$(echo "$SERVER_PRIV_KEY" | wg pubkey)
+
+# Save WireGuard settings
+echo "SERVER_PUB_NIC=$SERVER_PUB_NIC
+SERVER_WG_NIC=wg0
+SERVER_WG_IPV4=10.66.66.1
+SERVER_PORT=7070
+SERVER_PRIV_KEY=$SERVER_PRIV_KEY
+SERVER_PUB_KEY=$SERVER_PUB_KEY" >/etc/wireguard/params
+
+source /etc/wireguard/params
+
+# Add server interface
+echo "[Interface]
+Address = $SERVER_WG_IPV4/24
+ListenPort = $SERVER_PORT
+PrivateKey = $SERVER_PRIV_KEY
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o $SERVER_PUB_NIC -j MASQUERADE;
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o $SERVER_PUB_NIC -j MASQUERADE;" >>"/etc/wireguard/wg0.conf"
+
+iptables -t nat -I POSTROUTING -s 10.66.66.1/24 -o $SERVER_PUB_NIC -j MASQUERADE
+iptables -I INPUT 1 -i wg0 -j ACCEPT
+iptables -I FORWARD 1 -i $SERVER_PUB_NIC -o wg0 -j ACCEPT
+iptables -I FORWARD 1 -i wg0 -o $SERVER_PUB_NIC -j ACCEPT
+iptables -I INPUT 1 -i $SERVER_PUB_NIC -p udp --dport 7070 -j ACCEPT
+iptables-save > /etc/iptables.up.rules
+iptables-restore -t < /etc/iptables.up.rules
+netfilter-persistent save
+netfilter-persistent reload
+
+systemctl start "wg-quick@wg0"
+systemctl enable "wg-quick@wg0"
+
+# Check if WireGuard is running
+systemctl is-active --quiet "wg-quick@wg0"
+WG_RUNNING=$?
+
+# Tambahan
+rm -f /root/wg.sh
+echo "0 10 * * * root xp-wg" >> /etc/crontab
+                                                                                                 
+┌──(root💀kali)-[/home/kali/Desktop/Decrypt(2)]
+└─# bash usernew
+#!/bin/bash
+#script created by KingKongVPN
+# grep ports 
+opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+dropbearport="$(netstat -nlpt | grep -i dropbear | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+privoxyport="$(netstat -nlpt | grep -i privoxy | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
+clear
+echo -e "=========================================="
+echo -e "*     Script Created By KingKongVPN      *"
+echo -e "=========================================="
+read -p " Enter Username    : " Login
+        egrep "^$Login:" /etc/passwd >/dev/null
+        if [ $? -eq 0 ]; then
+        echo -e "Username \e[31m$Login\e[0m Already Register ..!"
+        exit 1
+        else
+read -p " Enter Password    : " Pass
+read -p " Total Days To Exp : " masaaktif
+echo -e "=========================================="
+echo -e "*      Script Created By KingKongVPN     *"
+echo -e "=========================================="
+echo -e ""
+IP=`dig +short myip.opendns.com @resolver1.opendns.com`
+useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
+exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+echo -e "Script Auto Install By KingKongVPN"
+clear
+echo -e "========================================"
+echo -e "*   SCRIPT AUTO INSTALL BY KINGKONGVPN  *"
+echo -e "========================================"
+echo -e ""
+sleep 2
+clear
+echo -e "===================================="
+echo -e "=    Your Account Information      ="
+echo -e "===================================="
+echo -e "Host / IP Server :" $IP
+echo -e "Username         :" $Login
+echo -e "Password         :" $Pass
+echo -e "===================================="
+echo -e "Port OpenSSH     : "$opensshport
+echo -e "Port SSL/TLS     : "$stunnel4port
+echo -e "Port Dropbear    : "$dropbearport
+echo -e "Port Privoxy     : "$privoxyport
+echo -e "Port Squid       : "$squidport
+echo -e "===================================="
+echo -e "Expired On       : $exp            "
+echo -e "===================================="
+echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡ "
+echo -e "===================================="
+fi
+ 

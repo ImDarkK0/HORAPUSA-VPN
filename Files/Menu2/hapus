@@ -1,0 +1,43 @@
+#!/bin/bash
+# Script Created By KingKongVPN
+clear
+echo -e "=================== Information ========================"
+echo -e "*                                                      *"
+echo -e "*           Script Created By KingKongVPN              *"
+echo -e "*              WhatsApp: +60178760080                  *"
+echo -e "*              Telegram: @xiihaiqal                    *"
+echo -e "*                                                      *"
+echo -e "=================== Information ========================"
+echo -e ""
+echo -e "    ================================================"
+read -p "      Enter Username To Be Remove : " Pengguna
+echo -e "    ================================================"
+clear
+if getent passwd $Pengguna > /dev/null 2>&1; then
+        userdel $Pengguna
+                echo -e "=================== Information ========================"
+                echo -e "*                                                      *"
+                echo -e "*           Script Created By KingKongVPN              *"
+                echo -e "*              WhatsApp: +60178760080                  *"
+                echo -e "*              Telegram: @xiihaiqal                    *"
+                echo -e "*                                                      *"
+                echo -e "=================== Information ========================"
+                echo -e ""
+        echo -e "    ================== Hore ! ======================"
+        echo -e "    *   Succesfully Delete User : $Pengguna        *"
+        echo -e "    ================== Hore ! ======================"
+                echo -e ""
+else
+                echo -e "=================== Information ========================"
+                echo -e "*                                                      *"
+                echo -e "*           Script Created By KingKongVPN              *"
+                echo -e "*              WhatsApp: +60178760080                  *"
+                echo -e "*              Telegram: @xiihaiqal                    *"
+                echo -e "*                                                      *"
+                echo -e "=================== Information ========================"
+                echo -e ""
+        echo -e "    ================ Yah Eror ! ===================="
+        echo -e "    *   Username $Pengguna Does Not Exist ..!      *"
+        echo -e "    ================ Yah Eror ! ===================="
+                echo -e ""
+fi

@@ -1,0 +1,56 @@
+#!/bin/bash
+#script created by KingKongVPN
+# grep ports 
+opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+dropbearport="$(netstat -nlpt | grep -i dropbear | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+privoxyport="$(netstat -nlpt | grep -i privoxy | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
+IP=`dig +short myip.opendns.com @resolver1.opendns.com`
+clear
+echo -e "=========================================="
+echo -e "*     Script Created By KingKongVPN      *"
+echo -e "=========================================="
+read -p " Enter Username To Renew    : " uname
+    egrep "^$uname" /etc/passwd >/dev/null
+        if [ $? -eq 1 ]; then
+        echo -e "Username \e[31m$uname\e[0m Does Not Exist ..!"
+        exit 1
+        else
+        exp="$(chage -l $uname | grep "Account expires" | awk -F": " '{print $2}')"
+        exp1=`date -d "$exp now" +"%Y-%m-%d"`
+        exp2=`date -d "$exp days" +%s`
+        currentdate=`date +%s`
+        exp3=$(($exp2 - $currentdate)) 
+        exp4=$(($exp3 / 86400))  
+  echo -e " Today Date Y-M-D           : \e[34m$(date -d today +"%Y-%m-%d")\e[0m"
+  echo -e " Current Expiry Date Y-M-D  : \e[33m$exp1\e[0m"
+  echo -e " Remaining Days To Expiry   : \e[31m$exp4\e[0m"
+    read -p " Total Days To Exp          : " expdate
+    today="$(date +"%Y-%m-%d")"
+        expire=$(date -d "$expdate days" +"%Y-%m-%d")
+    usermod -e $expire $uname
+clear
+echo -e "========================================"
+echo -e "*   SCRIPT AUTO INSTALL BY KINGKONGVPN *"
+echo -e "========================================"
+echo -e ""
+sleep 2
+clear
+echo -e "===================================="
+echo -e "=    Your Account Information      ="
+echo -e "===================================="
+echo -e "Host / IP Server :" $IP
+echo -e "Username         :" $uname
+echo -e "===================================="
+echo -e "Port OpenSSH     : "$opensshport
+echo -e "Port SSL/TLS     : "$stunnel4port
+echo -e "Port Dropbear    : "$dropbearport
+echo -e "Port Privoxy     : "$privoxyport
+echo -e "Port Squid       : "$squidport
+echo -e "===================================="
+echo -e "New Expiry       : $(date -d "$expdate days" +"%d-%m-%Y") "
+echo -e "===================================="
+echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡ "
+echo -e "===================================="
+fi

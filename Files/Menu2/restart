@@ -1,0 +1,45 @@
+#!/bin/bash
+#Created By KingKongVPN
+clear
+echo -e "Please Wait................................."
+echo -e "Created By KingKongVPN...................................."
+sleep 2
+echo -e "Restarting Dropbear"
+sleep 2
+service dropbear restart
+echo -e "Done"
+sleep 1
+echo -e "Restarting Webmin"
+sleep 2
+service webmin restart
+echo -e "Done"
+sleep 1
+echo -e "Restarting Squid"
+sleep 2
+service squid restart
+echo -e "Done"
+sleep 1
+echo -e "Restarting Privoxy"
+sleep 2
+service privoxy restart
+echo -e "Done"
+sleep 1
+echo -e "Restarting OpenVPN"
+sleep 2
+service openvpn restart
+echo -e "Done"
+sleep 1
+echo -e "Restarting OpenSSH"
+sleep 2
+service ssh restart
+echo -e "Done"
+sleep 1
+echo -e "Restarting Stunnel"
+sleep 2
+service stunnel4 restart
+echo -e "Done"
+sleep 2
+echo -e "Finishing Restart........"
+echo -e " "
+echo -e "All Service Has Been Restarted"
+                                                                                                 

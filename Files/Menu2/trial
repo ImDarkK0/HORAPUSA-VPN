@@ -1,0 +1,35 @@
+#!/bin/bash
+#Script Created By KingKongVPN
+clear
+# grep ports 
+opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+dropbearport="$(netstat -nlpt | grep -i dropbear | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+privoxyport="$(netstat -nlpt | grep -i privoxy | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
+squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
+
+IP=`dig +short myip.opendns.com @resolver1.opendns.com`
+Login=TRIAL`</dev/urandom tr -dc '0-9' | fold -w 2 | head -n 1`
+hari="1"
+Pass=`</dev/urandom tr -dc 'a-z' | fold -w 4 | head -n 1`
+clear
+useradd -e `date -d "$hari days" +"%Y-%m-%d"` -s /bin/false -M $Login
+echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
+clear
+echo -e "===================================="
+echo -e "=    Your Account Information      ="
+echo -e "===================================="
+echo -e "Host / IP Server :" $IP
+echo -e "Username         :" $Login
+echo -e "Password         :" $Pass
+echo -e "===================================="
+echo -e "Port OpenSSH     : "$opensshport
+echo -e "Port SSL/TLS     : "$stunnel4port
+echo -e "Port Dropbear    : "$dropbearport
+echo -e "Port Privoxy     : "$privoxyport
+echo -e "Port Squid       : "$squidport
+echo -e "===================================="
+echo -e "=       Expired 1n : 1 Day         ="
+echo -e "===================================="
+echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡ "
+echo -e "===================================="
