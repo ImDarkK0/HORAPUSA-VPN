@@ -11,7 +11,7 @@ echo '/sbin/shutdown -r now' >> /usr/local/bin/reboot_otomatis
 chmod +x /usr/local/bin/reboot_otomatis
 fi
 clear
-echo -e "\e[31m※\e[0m \e[33mPOWER BY KingKongVPN\e[0m \e[31m※\e[0m"
+echo -e "\e[31m※\e[0m \e[33mPOWER BY HORAPUSAVPN\e[0m \e[31m※\e[0m"
 echo -e "\e[36m-----------------------------------\e[0m"
 echo "  AUTO REBOOT SERVER SYSTEM ....!"
 echo -e "\e[36m-----------------------------------\e[0m"
