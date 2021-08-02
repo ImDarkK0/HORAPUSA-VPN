@@ -265,7 +265,7 @@ export DEBIAN_FRONTEND=noninteractive
 # ssh
 sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
-wget -O /etc/issue.net "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Other/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Other/issue.net"
 
 #privoxy
 apt-get install privoxy -y
@@ -304,7 +304,7 @@ privoxy
 
 # dropbear
 apt-get -y install dropbear
-wget -O /etc/default/dropbear "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Dropbear/dropbear"
+wget -O /etc/default/dropbear "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Dropbear/dropbear"
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -312,7 +312,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 
 # squid3
 apt-get -y install squid
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Squid/squid.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Squid/squid.conf"
 sed -i "s/ipserver/$myip/g" /etc/squid/squid.conf
 
 # Installing OpenVPN by pulling its repository inside sources.list file 
