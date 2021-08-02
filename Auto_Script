@@ -17,7 +17,7 @@ apt-get update
 apt-get upgrade -y
 apt-get install figlet toilet -y
 clear
-figlet KINGKONGVPN
+figlet HORAPUSAVPN
   echo -e " "                                                                                                        
 echo -e " ${color1}-----=[ Installations Menu ]=-----${color3}"
         echo -e " 1) Install AutoScript VPN Menu 1 "
