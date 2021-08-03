@@ -5,12 +5,11 @@ color2='\e[34;1m'
 color3='\e[0m'
 echo -e "\e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※
 ※                                                   ※
-※\e[0m       [WELCOME MY SYSTEM KINGKONGVPN VPS]         \e[36m※
+※\e[0m       [WELCOME MY SYSTEM HoraPusaVPN VPS]         \e[36m※
 ※                                                   ※
-※\e[0m        \e[32mWhatsApp\e[0m    \e[33m:\e[0m \e[34m+60178760080\e[0m                 \e[36m※
 ※\e[0m        \e[32mTelegram\e[0m    \e[33m:\e[0m \e[34m@xiihaiqal\e[0m                   \e[36m※
 ※                                                   ※
-※\e[0m         COPYRIGHT \e[31m©\e[0m KINGKONGVPN™ 2021 \e[31m®\e[0m           \e[36m※
+※\e[0m         COPYRIGHT \e[31m©\e[0m HoraPusaVPN 2021 \e[31m®\e[0m           \e[36m※
 ※                                                   ※
 ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※\e[0m
 "
@@ -85,12 +84,11 @@ clear
         echo " ";
         echo -e " \e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※
  ※                                 ※
- ※\e[0m  WELCOME MY SYSTEM KINGKONGVPN  \e[36m※
+ ※\e[0m  WELCOME MY SYSTEM HoraPusaVPN  \e[36m※
  ※                                 ※
- ※\e[0m   \e[35mWhatsApp\e[0m   \e[36m:\e[0m \e[33m+60178760080\e[0m     \e[36m※
  ※\e[0m   \e[35mTelegram\e[0m   \e[36m:\e[0m \e[33m@xiihaiqal\e[0m       \e[36m※
  ※                                 ※
- ※\e[0m        \e[31m©\e[0m KINGKONGVPN™ \e[31m®\e[0m         \e[36m※
+ ※\e[0m        \e[31m©\e[0m HoraPusaVPN \e[31m®\e[0m         \e[36m※
  ※                                 ※
  ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※\e[0m";
 echo -e "" 
@@ -256,7 +254,7 @@ echo -e "================================="
 echo -e "link none TLS  : ${vlesslink2}"
 echo -e "================================="
 echo -e "Expired On     : $exp"
-echo -e "By KingKongVPN"
+echo -e "By HoraPusaVPN"
 
                 exit
                 ;;
@@ -339,7 +337,7 @@ echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp"
 echo " =========================="
-echo -e "By KongKongVPN"
+echo -e "By HoraPusaVPN"
                 exit
                 ;;
                 8)
