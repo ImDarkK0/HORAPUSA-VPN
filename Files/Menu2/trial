@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script Created By KingKongVPN
+#Script Created By HoraPusaVPN
 clear
 # grep ports 
 opensshport="$(netstat -ntlp | grep -i ssh | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
@@ -31,5 +31,5 @@ echo -e "Port Squid       : "$squidport
 echo -e "===================================="
 echo -e "=       Expired 1n : 1 Day         ="
 echo -e "===================================="
-echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡ "
+echo -e "  ♡ TQ FOR SUPPORT HoraPusaVPN ♡ "
 echo -e "===================================="
