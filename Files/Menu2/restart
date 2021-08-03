@@ -2,7 +2,7 @@
 #Created By KingKongVPN
 clear
 echo -e "Please Wait................................."
-echo -e "Created By KingKongVPN...................................."
+echo -e "Created By HoraPusaVPN...................................."
 sleep 2
 echo -e "Restarting Dropbear"
 sleep 2
