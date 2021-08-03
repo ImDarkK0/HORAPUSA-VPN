@@ -1,5 +1,5 @@
 #!/bin/bash
-# Created by xiihaiqal
+# Created by HoraPusa
 red='\e[31m'
 green='\e[32m'
 NC='\e[0m'
@@ -20,9 +20,7 @@ echo -e "$passrandom\n$passrandom\n"|passwd $username &> /dev/null
  ※                                 ※
  ※\e[0m   WELCOME MY SYSTEM HoraPusaVPN \e[36m※
  ※                                 ※
- ※\e[0m   \e[35mWhatsApp\e[0m    \e[36m:\e[0m \e[33m+60178760080\e[0m    \e[36m※
- ※\e[0m   \e[35mTelegram\e[0m    \e[36m:\e[0m \e[33m@xiihaiqal\e[0m      \e[36m※
- ※\e[0m   \e[35mFacebook\e[0m    \e[36m:\e[0m \e[33m@xiihaiqal\e[0m      \e[36m※
+ ※\e[0m   \e[35mTelegram\e[0m    \e[36m:\e[0m \e[33m@hora_pusa\e[0m      \e[36m※
  ※                                 ※
  ※\e[0m        \e[31m©\e[0m HoraPusaVPN \e[31m®\e[0m         \e[36m※
  ※                                 ※
