@@ -61,5 +61,5 @@ listClients(){
 }
 listClients
 echo "-------------------------------";
-echo -e "By KingKongVPN"
+echo -e "By HoraPusaVPN"
 
