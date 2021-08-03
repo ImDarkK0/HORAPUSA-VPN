@@ -3,7 +3,7 @@ data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo -e "=================== Information ========================"
 echo -e "*                                                      *"
 echo -e "*           Script Created By HoraPusaVPN              *"
-echo -e "*              Telegram: @xiihaiqal                    *"
+echo -e "*              Telegram: @hora_pusa                    *"
 echo -e "*                                                      *"
 echo -e "=================== Information ========================"
 echo -e ""
