@@ -18,13 +18,13 @@ clear
 	echo " ";
 	echo -e " \e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※
  ※                                 ※
- ※\e[0m   WELCOME MY SYSTEM KingKongVPN \e[36m※
+ ※\e[0m   WELCOME MY SYSTEM HoraPusaVPN \e[36m※
  ※                                 ※
  ※\e[0m   \e[35mWhatsApp\e[0m    \e[36m:\e[0m \e[33m+60178760080\e[0m    \e[36m※
  ※\e[0m   \e[35mTelegram\e[0m    \e[36m:\e[0m \e[33m@xiihaiqal\e[0m      \e[36m※
  ※\e[0m   \e[35mFacebook\e[0m    \e[36m:\e[0m \e[33m@xiihaiqal\e[0m      \e[36m※
  ※                                 ※
- ※\e[0m        \e[31m©\e[0m KingKongVPN™ \e[31m®\e[0m         \e[36m※
+ ※\e[0m        \e[31m©\e[0m HoraPusaVPN \e[31m®\e[0m         \e[36m※
  ※                                 ※
  ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※\e[0m";
 	echo "
@@ -33,7 +33,7 @@ clear
   echo -e "  \e[34m※\e[0m Username : ${blue}$username${NC}";
   echo -e "  \e[31m※\e[0m Status   : ${red}LOCKED${NC}";
   echo " ";
-  echo " ★ POWER BY KINGKONGVPN™ SERVER ★";
+  echo " ★ POWER BY HoraPusaVPN SERVER ★";
   echo " ";
 	echo " ";
 	echo " ";
