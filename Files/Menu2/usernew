@@ -2,7 +2,7 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# By KingKongVPN
+# By HoraPusaVPN
 # ==================================================
 
 
@@ -103,7 +103,7 @@ stunnel4port="$(netstat -nlpt | grep -i stunnel | grep -i 0.0.0.0 | awk '{print 
 squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
 clear
 echo -e "=========================================="
-echo -e "*     Script Created By KingKongVPN      *"
+echo -e "*     Script Created By HoraPusaVPN      *"
 echo -e "=========================================="
 read -p " Enter Username    : " Login
         egrep "^$Login:" /etc/passwd >/dev/null
@@ -114,7 +114,7 @@ read -p " Enter Username    : " Login
 read -p " Enter Password    : " Pass
 read -p " Total Days To Exp : " masaaktif
 echo -e "=========================================="
-echo -e "*      Script Created By KingKongVPN     *"
+echo -e "*      Script Created By HoraPusaVPN     *"
 echo -e "=========================================="
 echo -e ""
 IP=`dig +short myip.opendns.com @resolver1.opendns.com`
@@ -124,7 +124,7 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e "Script Auto Install By KingKongVPN"
 clear
 echo -e "========================================"
-echo -e "*   SCRIPT AUTO INSTALL BY KINGKONGVPN  *"
+echo -e "*   SCRIPT AUTO INSTALL BY HoraPusaVPN  *"
 echo -e "========================================"
 echo -e ""
 sleep 2
@@ -144,7 +144,7 @@ echo -e "Port Squid       : "$squidport
 echo -e "===================================="
 echo -e "Expired On       : $exp            "
 echo -e "===================================="
-echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡ "
+echo -e "  ♡ TQ FOR SUPPORT HoraPusaVPN ♡ "
 echo -e "===================================="
 fi
  
