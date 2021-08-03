@@ -6,11 +6,11 @@ DOMAIN=myvpnkuy.xyz
 IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 clear
 echo -e "=========================================="
-echo -e "*     Script Created By KingKongVPN      *"
+echo -e "*     Script Created By HoraPusaVPN      *"
 echo -e "=========================================="
 read -p " Enter Subdomain  : " sub
 echo -e "=========================================="
-echo -e "*     Script Created By KingKongVPN      *"
+echo -e "*     Script Created By HoraPusaVPN      *"
 echo -e "=========================================="
 echo -e ""
 SUB_DOMAIN=${sub}.myvpnkuy.xyz
@@ -49,7 +49,7 @@ echo -e "===================================="
 echo -e "Host IP        :" $IP
 echo -e "Subdomain      : $SUB_DOMAIN"
 echo -e "===================================="
-echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡"
+echo -e "  ♡ TQ FOR SUPPORT HoraPusaVPN ♡"
 echo -e "===================================="
 echo $SUB_DOMAIN > /root/domain
 rm -f /root/cf.sh
