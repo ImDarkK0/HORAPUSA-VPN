@@ -30,7 +30,7 @@ clear
  ※\e[0m   \e[35mWhatsApp\e[0m   \e[36m:\e[0m \e[33m+60178760080\e[0m     \e[36m※
  ※\e[0m   \e[35mTelegram\e[0m   \e[36m:\e[0m \e[33m@xiihaiqal\e[0m       \e[36m※
  ※                                 ※
- ※\e[0m        \e[31m©\e[0m KINGKONGVPN™ \e[31m®\e[0m         \e[36m※
+ ※\e[0m        \e[31m©\e[0m HoraPusaVPN™ \e[31m®\e[0m         \e[36m※
  ※                                 ※
  ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※\e[0m";
         echo "
@@ -40,7 +40,7 @@ clear
         echo -e "  \e[34m※\e[0m Password   : \e[34m$pass\e[0m";
         echo -e "  \e[32m※\e[0m Expired On : \e[32m$(date -d "$expdate days" +"%d-%m-%Y")\e[0m";
         echo " ";
-        echo " ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡";
+        echo " ♡ TQ FOR SUPPORT HoraPusaVPN™ ♡";
         echo " ";
         echo " ";
         echo " ";
@@ -75,10 +75,9 @@ clear
  ※                                 ※
  ※\e[0m  WELCOME MY SYSTEM KINGKONGVPN  \e[36m※
  ※                                 ※
- ※\e[0m   \e[35mWhatsApp\e[0m   \e[36m:\e[0m \e[33m+60178760080\e[0m     \e[36m※
- ※\e[0m   \e[35mTelegram\e[0m   \e[36m:\e[0m \e[33m@xiihaiqal\e[0m       \e[36m※
+ ※\e[0m   \e[35mTelegram\e[0m   \e[36m:\e[0m \e[33m@hora_pusa\e[0m       \e[36m※
  ※                                 ※
- ※\e[0m        \e[31m©\e[0m KINGKONGVPN™ \e[31m®\e[0m         \e[36m※
+ ※\e[0m        \e[31m©\e[0m HoraPusaVPN™ \e[31m®\e[0m         \e[36m※
  ※                                 ※
  ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※\e[0m"; 
         echo "
@@ -87,7 +86,7 @@ clear
         echo -e "  \e[34m※\e[0m Username   : \e[34m$uname\e[0m";
         echo -e "  \e[32m※\e[0m New Expiry : \e[32m$(date -d "$expdate days" +"%d-%m-%Y")\e[0m";
         echo " ";
-        echo " ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡";
+        echo " ♡ TQ FOR SUPPORT HoraPusaVPN™ ♡";
         echo " ";
         echo " ";
         echo " ";
@@ -121,7 +120,7 @@ fi
 
 function mon_ssh(){
 clear
-echo -e "\e[31m※\e[0m \e[33mPOWER BY KINGKONGVPN™ SERVER\e[0m \e[31m※\e[0m"
+echo -e "\e[31m※\e[0m \e[33mPOWER BY HoraPusaVPN™ SERVER\e[0m \e[31m※\e[0m"
 echo -e "\e[36m-----------------------------------------------------------\e[0m"
 echo -e " Date-Time      \e[36m|\e[0m  PID  \e[36m|\e[0m    User Name    \e[36m|\e[0m    From IP  "
 echo -e "\e[36m-----------------------------------------------------------\e[0m"
@@ -188,7 +187,7 @@ fi
 
 function user_list(){
 clear
-echo -e "\e[31m※\e[0m \e[33mPOWER BY KINGKONGVPN™ SERVER\e[0m \e[31m※\e[0m"
+echo -e "\e[31m※\e[0m \e[33mPOWER BY HoraPusaVPN SERVER\e[0m \e[31m※\e[0m"
 echo -e "\e[36m--------------------------------------------\e[0m"
 echo "BIL  USERNAME        STATUS       EXP DATE   "
 echo -e "\e[36m--------------------------------------------\e[0m"
@@ -221,7 +220,7 @@ echo -e "\e[36m----------------------------------------------\e[0m"
 
 function expired_users(){
 clear
-echo -e "\e[32m※\e[0m \e[34mPOWER BY KINGKONGVPN™ SERVER\e[0m \e[32m※\e[0m"
+echo -e "\e[32m※\e[0m \e[34mPOWER BY HoraPusaVPN SERVER\e[0m \e[32m※\e[0m"
 echo -e "\e[36m---------------------------------\e[0m"
 echo "BIL  USERNAME          EXPIRED "
 echo -e "\e[36m---------------------------------\e[0m"
@@ -250,7 +249,7 @@ rm -r /tmp/*.txt
 
 function not_expired_users(){
 clear
-echo -e "\e[33m※\e[0m \e[34mPOWER BY KINGKONGVPN™ SERVER\e[0m \e[33m※\e[0m"
+echo -e "\e[33m※\e[0m \e[34mPOWER BY HoraPusaVPN SERVER\e[0m \e[33m※\e[0m"
 echo -e "\e[36m---------------------------------\e[0m"
 echo "BIL  USERNAME          EXPIRED "
 echo -e "\e[36m---------------------------------\e[0m"
@@ -284,7 +283,7 @@ v2rayy.sh
 else
 clear
                 echo -e "${color1}========================================${color3}"
-        echo -e "* ${color2}SCRIPT AUTO INSTALL BY KingKongVPN ${color3}*"
+        echo -e "* ${color2}SCRIPT AUTO INSTALL BY HoraPusaVPN ${color3}*"
         echo -e "${color1}========================================${color3}"
                 read -p "Do You Want To Install V2ray?(y/n): " cekk
 if [ "$cekk" = "y" ]; then
@@ -307,11 +306,11 @@ if [[ -e /etc/wireguard/params ]]; then
 wireguard.sh
 else
                 echo -e "${color1}========================================${color3}"
-        echo -e "* ${color2}SCRIPT AUTO INSTALL BY KingKongVPN ${color3}*"
+        echo -e "* ${color2}SCRIPT AUTO INSTALL BY HoraPusaVPN ${color3}*"
         echo -e "${color1}========================================${color3}"
                 read -p "Do You Want To Install Wireguard?(y/n): " cekk
 if [ "$cekk" = "y" ]; then
-wget -O /root/wg "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Wireguard/wg"
+wget -O /root/wg "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Wireguard/wg"
 chmod +x wg
 ./wg
 rm wg
@@ -329,15 +328,15 @@ if [[ -e /etc/shadowsocks-libev/akun.conf ]]; then
 shadowsocks.sh
 else
                 echo -e "${color1}========================================${color3}"
-        echo -e "* ${color2}SCRIPT AUTO INSTALL BY KingKongVPN ${color3}*"
+        echo -e "* ${color2}SCRIPT AUTO INSTALL BY HoraPusaVPN ${color3}*"
         echo -e "${color1}========================================${color3}"
                 read -p "Do You Want To Install Shadowsocks?(y/n): " cekk
 if [ "$cekk" = "y" ]; then
-wget -O /root/instss "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Shadowsocks/instss"
+wget -O /root/instss "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Shadowsocks/instss"
 chmod +x instss
 ./instss
 rm instss
-wget -O /root/instssr "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Shadowsocks/instssr"
+wget -O /root/instssr "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Shadowsocks/instssr"
 chmod +x instssr
 ./instssr
 rm instssr
@@ -354,12 +353,11 @@ clear
 echo " ";
 echo -e "\e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※
 ※                                                   ※
-※\e[0m       [WELCOME MY SYSTEM KINGKONGVPN VPS]         \e[36m※
+※\e[0m       [WELCOME MY SYSTEM HoraPusaVPN VPS]         \e[36m※
 ※                                                   ※
-※\e[0m        \e[32mWhatsApp\e[0m    \e[33m:\e[0m \e[34m+60178760080\e[0m                 \e[36m※
-※\e[0m        \e[32mTelegram\e[0m    \e[33m:\e[0m \e[34m@xiihaiqal\e[0m                   \e[36m※
+※\e[0m        \e[32mTelegram\e[0m    \e[33m:\e[0m \e[34m@hora_pusa\e[0m                   \e[36m※
 ※                                                   ※
-※\e[0m         COPYRIGHT \e[31m©\e[0m KINGKONGVPN™ 2021 \e[31m®\e[0m           \e[36m※
+※\e[0m         COPYRIGHT \e[31m©\e[0m HoraPusaVPN 2021 \e[31m®\e[0m           \e[36m※
 ※                                                   ※
 ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※\e[0m
 ";
@@ -503,8 +501,8 @@ do
             ;;  
                 "Update Script Menu")
                         clear
-                                    wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/menu"
-                        wget -O /usr/local/bin/m "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/menu"
+                                    wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/menu"
+                        wget -O /usr/local/bin/m "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/menu"
                         wget -O /usr/local/bin/kingkongvpn.sh "https://raw.githubusercontent.com/xiihaiqal/ShadowsocksR/master/kingkongvpn.sh"
                         wget -O /usr/local/bin/user-password "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/user-password"
                         wget -O /usr/local/bin/trial "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/trial"
