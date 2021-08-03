@@ -25,7 +25,7 @@ clear
         echo " ";
         echo -e " \e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※
  ※                                 ※
- ※\e[0m  WELCOME MY SYSTEM KINGKONGVPN  \e[36m※
+ ※\e[0m  WELCOME MY SYSTEM HoraPusaVPN  \e[36m※
  ※                                 ※
  ※\e[0m   \e[35mWhatsApp\e[0m   \e[36m:\e[0m \e[33m+60178760080\e[0m     \e[36m※
  ※\e[0m   \e[35mTelegram\e[0m   \e[36m:\e[0m \e[33m@xiihaiqal\e[0m       \e[36m※
@@ -73,11 +73,11 @@ clear
         echo " ";
         echo -e " \e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※
  ※                                 ※
- ※\e[0m  WELCOME MY SYSTEM KINGKONGVPN  \e[36m※
+ ※\e[0m  WELCOME MY SYSTEM HoraPusaVPN  \e[36m※
  ※                                 ※
  ※\e[0m   \e[35mTelegram\e[0m   \e[36m:\e[0m \e[33m@hora_pusa\e[0m       \e[36m※
  ※                                 ※
- ※\e[0m        \e[31m©\e[0m HoraPusaVPN™ \e[31m®\e[0m         \e[36m※
+ ※\e[0m        \e[31m©\e[0m HoraPusaVPN \e[31m®\e[0m         \e[36m※
  ※                                 ※
  ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※\e[0m"; 
         echo "
@@ -86,7 +86,7 @@ clear
         echo -e "  \e[34m※\e[0m Username   : \e[34m$uname\e[0m";
         echo -e "  \e[32m※\e[0m New Expiry : \e[32m$(date -d "$expdate days" +"%d-%m-%Y")\e[0m";
         echo " ";
-        echo " ♡ TQ FOR SUPPORT HoraPusaVPN™ ♡";
+        echo " ♡ TQ FOR SUPPORT HoraPusaVPN ♡";
         echo " ";
         echo " ";
         echo " ";
@@ -287,7 +287,7 @@ clear
         echo -e "${color1}========================================${color3}"
                 read -p "Do You Want To Install V2ray?(y/n): " cekk
 if [ "$cekk" = "y" ]; then
-wget -O /root/insv2ray "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/V2ray/insv2ray"
+wget -O /root/insv2ray "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/V2ray/insv2ray"
 chmod +x insv2ray
 service nginx stop
 ./insv2ray
@@ -503,18 +503,18 @@ do
                         clear
                                     wget -O /usr/local/bin/menu "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/menu"
                         wget -O /usr/local/bin/m "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/menu"
-                        wget -O /usr/local/bin/kingkongvpn.sh "https://raw.githubusercontent.com/xiihaiqal/ShadowsocksR/master/kingkongvpn.sh"
-                        wget -O /usr/local/bin/user-password "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/user-password"
-                        wget -O /usr/local/bin/trial "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/trial"
-                        wget -O /usr/local/bin/user-lock "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/user-lock"
-                        wget -O /usr/local/bin/user-unlock "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/user-unlock"
-                                                wget -O /usr/local/bin/user-generate "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/user-generate"
-                                                wget -O /usr/local/bin/edit-port "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/edit-port"
-                                                wget -O /usr/local/bin/shadowsocks.sh "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/shadowsocks.sh"
-                                                wget -O /usr/local/bin/v2rayy.sh "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/v2rayy.sh"
-                                                wget -O /usr/local/bin/wireguard.sh "https://raw.githubusercontent.com/xiihaiqal/AutoScriptVPS/master/Files/Menu/wireguard.sh"
+                        wget -O /usr/local/bin/kingkongvpn.sh "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/kingkongvpn.sh"
+                        wget -O /usr/local/bin/user-password "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/user-password"
+                        wget -O /usr/local/bin/trial "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/trial"
+                        wget -O /usr/local/bin/user-lock "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/user-lock"
+                        wget -O /usr/local/bin/user-unlock "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/user-unlock"
+                                                wget -O /usr/local/bin/user-generate "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/user-generate"
+                                                wget -O /usr/local/bin/edit-port "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/edit-port"
+                                                wget -O /usr/local/bin/shadowsocks.sh "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/shadowsocks.sh"
+                                                wget -O /usr/local/bin/v2rayy.sh "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/v2rayy.sh"
+                                                wget -O /usr/local/bin/wireguard.sh "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Menu/wireguard.sh"
                         clear
-                        echo "-------KingKongVPN-------"
+                        echo "-------HoraPusaVPN-------"
                         echo "Script Menu Has Been Updated"
                         break
                         ;;
