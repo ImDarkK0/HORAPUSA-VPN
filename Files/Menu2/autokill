@@ -1,7 +1,8 @@
 #!/bin/bash
 
 if [[ $USER != "root" ]]; then
-        echo "Maaf, Anda harus menjalankan ini sebagai root"
+        echo "Sorry, you have to run this as root
+"
         exit
 fi
 
@@ -27,7 +28,7 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
         RCLOCAL='/etc/rc.d/rc.local'
         chmod +x /etc/rc.d/rc.local
 else
-        echo "Sepertinya Anda tidak menjalankan script ini pada sistem Debian, Ubuntu atau CentOS"
+        echo "You don't seem to be running this script on a Debian, Ubuntu or CentOS system"
         exit
 fi
 
