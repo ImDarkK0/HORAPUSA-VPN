@@ -27,7 +27,7 @@ elif [[ -e /etc/centos-release || -e /etc/redhat-release ]]; then
 	RCLOCAL='/etc/rc.d/rc.local'
 	chmod +x /etc/rc.d/rc.local
 else
-	echo "Sepertinya Anda tidak menjalankan script ini pada sistem Debian, Ubuntu atau CentOS"
+	echo "It looks like you are not running this script on a Debian, Ubuntu or CentOS system"
 	exit
 fi
 
