@@ -7,7 +7,7 @@ echo -e "\e[36m※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ ※ �
 ※                                                   ※
 ※\e[0m       [WELCOME MY SYSTEM HoraPusaVPN VPS]         \e[36m※
 ※                                                   ※
-※\e[0m        \e[32mTelegram\e[0m    \e[33m:\e[0m \e[34m@xiihaiqal\e[0m                   \e[36m※
+※\e[0m        \e[32mTelegram\e[0m    \e[33m:\e[0m \e[34m@hora_pusa\e[0m                   \e[36m※
 ※                                                   ※
 ※\e[0m         COPYRIGHT \e[31m©\e[0m HoraPusaVPN 2021 \e[31m®\e[0m           \e[36m※
 ※                                                   ※
