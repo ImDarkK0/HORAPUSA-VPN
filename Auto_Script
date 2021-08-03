@@ -423,11 +423,11 @@ Certificate:
         Version: 3 (0x2)
         Serial Number: 1 (0x1)
     Signature Algorithm: sha256WithRSAEncryption
-        Issuer: C=MY, ST=SBH, L=TWU, O=KingKongVPN, OU=KingKongVPN, CN=KingKongVPN CA/name=KingKongVPN/emailAddress=admin@kingkongvpn.xyz
+        Issuer: C=MY, ST=SBH, L=TWU, O=HORAPUSA, OU=HORAPUSA, CN=HORAPUSA CA/name=HORAPUSA/emailAddress=HORAPUSA@HORAPUSA.xyz
         Validity
             Not Before: Dec 18 19:57:50 2020 GMT
             Not After : Dec 16 19:57:50 2030 GMT
-        Subject: C=MY, ST=SBH, L=TWU, O=KingKongVPN, OU=KingKongVPN, CN=KingkongVPN/name=KingKongVPN/emailAddress=admin@kingkongvpn.xyz
+        Subject: C=MY, ST=SBH, L=TWU, O=HORAPUSA, OU=HORAPUSA, CN=HORAPUSA/name=HORAPUSA/emailAddress=HORAPUSA@HORAPUSA.xyz
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (2048 bit)
@@ -462,7 +462,7 @@ Certificate:
                 21:4D:AD:6E:CA:7E:C6:82:C5:AD:6E:F9:4F:C5:05:68:9D:14:75:F2
             X509v3 Authority Key Identifier: 
                 keyid:BA:A3:BA:04:A0:C2:FC:04:FD:FB:FF:FB:AE:8A:ED:16:C3:6F:F6:DC
-                DirName:/C=MY/ST=SBH/L=TWU/O=KingKongVPN/OU=KingKongVPN/CN=KingKongVPN CA/name=KingKongVPN/emailAddress=admin@kingkongvpn.xyz
+                DirName:/C=MY/ST=SBH/L=TWU/O=HORAPUSA/OU=HORAPUSA/CN=HORAPUSA CA/name=HORAPUSA/emailAddress=HORAPUSA@HORAPUSA.xyz
                 serial:EE:BB:0C:91:B0:EA:4E:05
 
             X509v3 Extended Key Usage: 
@@ -686,7 +686,7 @@ cd ; rm -rf badvpn.sh badvpn-1.999.128/ badvpn-1.999.128.tar.bz2 >/dev/null 2>/d
 apt-get install stunnel4 -y
 wget -P /etc/stunnel/ "https://raw.githubusercontent.com/BHATHIYA-ROOT/HORAPUSA-VPN/master/Files/Stunnel/stunnel.conf"
  # Creating stunnel certifcate using openssl
-openssl req -new -x509 -days 9999 -nodes -subj "/C=MY/ST=SBH/L=TWU/O=HORAPUSAVPN/OU=HORAPUSAVPN/CN=HORAPUSAVPN" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
+openssl req -new -x509 -days 9999 -nodes -subj "/C=MY/ST=SBH/L=TWU/O=HORAPUSA/OU=HORAPUSA/CN=HORAPUSA" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
 ##  > /dev/null 2>&1
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 
@@ -779,7 +779,7 @@ cat <<'mySiteOvpn' > /home/vps/public_html/index.html
 <!DOCTYPE html>
 <html lang="en">
 
-<head><link rel="icon" type="image/png" href="https://cdn0.iconfinder.com/data/icons/universal-3-4/21/130-512.png"><meta charset="utf-8" /><title>KingkongVPN OVPN Config Download</title><meta name="description" content="KingKongVPN Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group">
+<head><link rel="icon" type="image/png" href="https://telegra.ph/file/5fbc3a80a873b3c0ad78d.png"><meta charset="utf-8" /><title>KingkongVPN OVPN Config Download</title><meta name="description" content="KingKongVPN Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group">
 
 <li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For UDP <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> UDP Server For OpenVPN</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/client-udp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li>
 
