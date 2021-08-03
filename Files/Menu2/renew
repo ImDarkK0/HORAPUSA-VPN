@@ -9,7 +9,7 @@ squidport="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}')"
 IP=`dig +short myip.opendns.com @resolver1.opendns.com`
 clear
 echo -e "=========================================="
-echo -e "*     Script Created By KingKongVPN      *"
+echo -e "*     Script Created By HoraPusaVPN      *"
 echo -e "=========================================="
 read -p " Enter Username To Renew    : " uname
     egrep "^$uname" /etc/passwd >/dev/null
@@ -32,7 +32,7 @@ read -p " Enter Username To Renew    : " uname
     usermod -e $expire $uname
 clear
 echo -e "========================================"
-echo -e "*   SCRIPT AUTO INSTALL BY KINGKONGVPN *"
+echo -e "*   SCRIPT AUTO INSTALL BY HoraPusaVPN *"
 echo -e "========================================"
 echo -e ""
 sleep 2
@@ -51,6 +51,6 @@ echo -e "Port Squid       : "$squidport
 echo -e "===================================="
 echo -e "New Expiry       : $(date -d "$expdate days" +"%d-%m-%Y") "
 echo -e "===================================="
-echo -e "  ♡ TQ FOR SUPPORT KINGKONGVPN™ ♡ "
+echo -e "  ♡ TQ FOR SUPPORT HoraPusaVPN ♡ "
 echo -e "===================================="
 fi
